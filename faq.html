@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ — Парсер Оценок</title>
+    <style>
+        :root { --bg-color: #0f172a; --card-bg: #1e293b; --text-color: #f8fafc; --text-muted: #94a3b8; --accent: #38bdf8; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        body { background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; padding-top: 20px; }
+        .back-link { display: inline-block; color: var(--accent); text-decoration: none; margin-bottom: 20px; font-weight: bold; }
+        h1 { margin-bottom: 30px; }
+        .faq-item { background: var(--card-bg); padding: 20px; border-radius: 12px; margin-bottom: 20px; }
+        .faq-item h3 { margin-bottom: 10px; color: var(--accent); }
+        .faq-item p { color: var(--text-muted); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← На главную</a>
+        <h1>Вопросы и ответы (FAQ)</h1>
+
+        <div class="faq-item">
+            <h3>Безопасно ли вводить логин и пароль?</h3>
+            <p>Да, полностью. Приложение выполняет авторизацию напрямую на сервере электронного дневника. Ваши учетные данные используются только для получения сессии на телефоне и никуда не отправляются.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Как установить APK на Android?</h3>
+            <p>Скачайте `.apk` файл, откройте его через загрузки на телефоне. Если система попросит разрешение на «Установку из неизвестных источников», разрешите её в настройках браузера или проводника.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Что делать, если приложение пишет ошибку сети или парсинга?</h3>
+            <p>Обычно это происходит, если школьный портал проводит технические работы или изменил структуру страниц. Проверьте обновления или напишите в поддержку.</p>
+        </div>
+    </div>
+</body>
+</html>
