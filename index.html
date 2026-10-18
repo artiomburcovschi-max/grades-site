@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Парсер Оценок — Быстрый доступ к успеваемости</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-color: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --accent-hover: #0ea5e9;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--text-color);
+        }
+        p.subtitle {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+        }
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: #0f172a;
+            font-weight: bold;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+        .btn:hover {
+            background-color: var(--accent-hover);
+        }
+        section {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+        }
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--accent);
+        }
+        ul {
+            padding-left: 20px;
+            color: var(--text-muted);
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .faq-item {
+            margin-bottom: 15px;
+        }
+        .faq-item h3 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+        .faq-item p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+        footer {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Парсер Оценок</h1>
+            <p class="subtitle">Удобный инструмент для мониторинга успеваемости без лишней головной боли.</p>
+            <a href="https://github.com/ТВОЙ_АККАУНТ/ТВОЙ_РЕПОЗИТОРИЙ/releases/latest" class="btn">Скачать последнюю версию</a>
+        </header>
+
+        <section>
+            <h2>О приложении</h2>
+            <p>Приложение создано для того, чтобы автоматизировать проверку оценок. Больше не нужно вручную открывать тяжелые сайты и каждый раз вводить данные — всё работает быстро и прямо на вашем устройстве.</p>
+        </section>
+
+        <section>
+            <h2>Часто задаваемые вопросы (FAQ)</h2>
+            <div class="faq-item">
+                <h3>Безопасно ли использовать приложение?</h3>
+                <p>Да. Авторизация происходит локально на вашем устройстве. Ваши учетные данные никуда не передаются и не сохраняются на сторонних серверах.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Что делать, если приложение перестало работать?</h3>
+                <p>Школьные платформы часто меняют интерфейс. Если парсер перестал собирать данные, проверьте наличие обновлений на GitHub или напишите мне.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Политика конфиденциальности</h2>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">
+                Мы уважаем вашу конфиденциальность. Данное приложение не собирает, не хранит и не передает персональные данные пользователей третьим лицам. Вся обрабатываемая информация используется исключительно для отображения ваших оценок внутри программы.
+            </p>
+        </section>
+
+        <section>
+            <h2>Обратная связь</h2>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">
+                Нашли баг или есть предложение по улучшению? Создайте Issue на GitHub или напишите в Telegram: <a href="https://t.me/ТВОЙ_ТЕЛЕГРАМ" style="color: var(--accent);">@твой_тег</a>
+            </p>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Парсер Оценок. Все права защищены.</p>
+        </footer>
+    </div>
+</body>
+</html>
