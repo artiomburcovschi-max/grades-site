@@ -1,0 +1,8 @@
+{
+  "versionCode": 200,
+  "versionName": "0.2.0",
+  "apkUrl": "https://github.com/GITHUB_USER/grades-site/releases/download/v0.2.0/WatchYourGrade.apk",
+  "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "sizeBytes": 3500000,
+  "notes": "Аналитика и даты оценок"
+}

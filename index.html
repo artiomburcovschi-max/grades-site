@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'">
+<!-- Пока сайт не запущен публично, скрываем его от поисковиков. При запуске удали эту строку. -->
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23238636'/%3E%3Cpath d='M8 17l5 5 11-12' stroke='%23fff' stroke-width='3' fill='none'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
+<meta name="description" content="WatchYourGrade: неофициальный Android-клиент для электронного дневника agenda.sime.md. Данные остаются на вашем телефоне.">
+<title>WatchYourGrade: Android-клиент для agenda.sime.md</title>
+</head>
+<body>
+<a class="skip-link" href="#main">К содержимому</a>
+<div class="container">
+  <header>
+    <h1>WatchYourGrade</h1>
+    <p class="subtitle">Неофициальный Android-клиент для электронного дневника <a href="https://agenda.sime.md" target="_blank" rel="noopener noreferrer">agenda.sime.md</a></p>
+  </header>
+
+  <main id="main">
+    <div class="notice">
+      <p><strong>Неофициальное приложение.</strong> Оно не одобрено и не поддерживается MEC / CTICE. Правила портала могут ограничивать автоматизированный доступ, поэтому вы используете приложение на свой риск. Подробнее в разделе «Ограничения и риски» ниже.</p>
+    </div>
+
+    <section class="card" aria-labelledby="download-title">
+      <h2 id="download-title">Скачать</h2>
+      <p>Оценки, средние баллы и аналитика на телефоне. Приложение входит на портал под вашим аккаунтом так же, как это делает браузер, и показывает оценки в удобном виде.</p>
+      <div class="download-area">
+        <a id="download-btn" class="btn-download" href="#download-title" aria-disabled="true">Скачать WatchYourGrade (.apk)</a>
+        <span class="file-info">Android 7.0 и новее</span>
+      </div>
+      <noscript><p class="meta">Для кнопки скачивания нужен JavaScript.</p></noscript>
+      <div id="latest-box" class="latest-box" hidden>
+        <p>Последняя версия: <strong id="latest-version"></strong><span id="latest-size"></span></p>
+        <p id="latest-notes" class="meta"></p>
+        <p id="latest-sha-row" hidden>SHA-256 файла: <code id="latest-sha"></code></p>
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="install-title">
+      <h2 id="install-title">Как установить</h2>
+      <ol>
+        <li>Скачайте файл и откройте его.</li>
+        <li>Android попросит разрешить установку приложений из этого источника (браузера или «Файлов»). Разрешите: это нужно для любых приложений вне Google Play.</li>
+        <li>Play Protect может показать предупреждение о неизвестном разработчике. Это ожидаемо; перед установкой сверьте отпечаток файла (блок ниже).</li>
+        <li>Откройте приложение и войдите логином и паролем родителя от agenda.sime.md. Сейчас поддерживается вход родителя; вход ученика не поддерживается.</li>
+        <li>Обновления ставятся поверх: удалять старую версию не нужно, данные сохранятся.</li>
+      </ol>
+    </section>
+
+    <section class="card" aria-labelledby="verify-title">
+      <h2 id="verify-title">Как проверить файл</h2>
+      <p>Сравните SHA-256 скачанного файла с значением выше (на телефоне это умеют приложения для проверки хеша; на компьютере команда <code>certutil -hashfile WatchYourGrade.apk SHA256</code> в Windows или <code>sha256sum</code> в Linux и macOS). Совпадение значит, что файл не повреждён и не подменён по дороге.</p>
+      <div id="cert-box" hidden>
+        <p>Отпечаток сертификата подписи (SHA-256), одинаковый у всех версий:</p>
+        <p><code id="cert-sha"></code></p>
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="features-title">
+      <h2 id="features-title">Что умеет</h2>
+      <ul class="spec-list">
+        <li>Оценки по предметам и семестрам, среднее по предмету и семестровая оценка, если она выставлена.</li>
+        <li>Даты оценок там, где их отдаёт портал (сейчас для последних оценок); у остальных дата показана как неизвестная.</li>
+        <li>История оценок на устройстве: при обновлении приложение сообщает, какие оценки появились.</li>
+        <li>Экран «Аналитика»: общий средний балл, средние по предметам и график динамики.</li>
+        <li>Быстрый запуск: сохранённые оценки видны сразу, а портал приложение опрашивает не чаще раза в 30 минут при открытии.</li>
+      </ul>
+    </section>
+
+    <section class="card" aria-labelledby="privacy-title">
+      <h2 id="privacy-title">Что происходит с вашими данными</h2>
+      <ul class="spec-list">
+        <li>Логин и пароль хранятся только на телефоне в зашифрованном виде (ключ из Android Keystore) и отправляются только на <code>agenda.sime.md</code> по HTTPS.</li>
+        <li>У разработчика нет сервера для ваших данных: нет аккаунтов, аналитики, рекламы и отправки отчётов об ошибках. Разработчик не видит ни ваш пароль, ни оценки.</li>
+        <li>Раз в сутки приложение проверяет на GitHub, не вышла ли новая версия. Персональные данные при этом не передаются, но GitHub, как любой сайт, видит IP-адрес.</li>
+        <li>Кнопка «Сменить аккаунт» удаляет логин, пароль, историю оценок и сохранённый сеанс портала.</li>
+      </ul>
+      <p>Полный перечень, что где хранится и куда отправляется, в <a href="privacy.html">политике конфиденциальности</a>.</p>
+    </section>
+
+    <section class="card" aria-labelledby="risk-title">
+      <h2 id="risk-title">Ограничения и риски</h2>
+      <ul>
+        <li>Приложение читает страницы портала, поэтому может перестать работать, когда портал изменит вёрстку. Исправление выходит обновлением.</li>
+        <li>Портал вправе ограничить автоматизированный доступ или заблокировать учётную запись. За такие последствия разработчик ответственности не несёт.</li>
+        <li>Пароль хранится на телефоне, чтобы входить без ввода. Используйте блокировку экрана и не используйте этот же пароль на других сайтах.</li>
+      </ul>
+    </section>
+  </main>
+</div>
+<footer>
+  <div class="footer-links">
+    <a href="index.html">Главная</a>
+    <a href="faq.html">FAQ</a>
+    <a href="privacy.html">Политика конфиденциальности</a>
+    <a href="mailto:support.watchyourgrade@gmail.com">Поддержка</a>
+  </div>
+  <p class="copyright">&copy; 2026 WatchYourGrade. Независимый проект: не связан с Министерством образования и исследований Республики Молдова (MEC), CTICE и разработчиками платформы Agenda SIME.</p>
+</footer>
+<script src="assets/config.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>
