@@ -26,11 +26,11 @@
 
 1. Собери подписанный APK (см. `RELEASING.md` в проекте приложения) и переименуй его в `WatchYourGrade.apk`.
    Имя должно быть одинаковым у всех версий: на нём держится ссылка «latest».
-2. GitHub → Releases → Draft a new release: тег `v0.2.0`, прикрепи `WatchYourGrade.apk`.
+2. GitHub → Releases → Draft a new release: тег `v0.3.0`, прикрепи `WatchYourGrade.apk`.
 3. Сгенерируй `latest.json` (скрипт из проекта приложения):
    ```
-   python tools/make_latest_json.py WatchYourGrade.apk --version-code 200 --version-name 0.2.0 \
-     --base-url https://github.com/ИМЯ/grades-site/releases/download/v0.2.0/ \
+   python tools/make_latest_json.py WatchYourGrade.apk --version-code 300 --version-name 0.3.0 \
+     --base-url https://github.com/ИМЯ/grades-site/releases/download/v0.3.0/ \
      --notes "Что нового" > latest.json
    ```
 4. Положи `latest.json` в корень этого репозитория, закоммить и запушь. Главная страница сама покажет версию, размер и SHA-256.
